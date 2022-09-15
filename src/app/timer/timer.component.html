@@ -1,16 +1,21 @@
-<div>{{ formatTimeLeft(timeLeft) }}</div>
+<div [class]="'phase' + phase">
+    <div class="timeLeft">{{ formatTimeLeft(timeLeft) }}</div>
 
-<div>
-    Exercício: {{ currentEx + 1 }}/{{ this.exercises.length }}: {{ exercises[this.currentEx].name }}
-</div>
-<div>
-    Repetição {{ currentRep + 1 }}/{{ this.exercises.length }}: {{ exercises[this.currentEx].repetitions }}
-</div>
-<div>
-    {{ formatPhase(phase) }}
+    <div>
+        Exercício: {{ currentEx + 1 }}/{{ this.exercises.length }}: {{ exercises[this.currentEx].name }}
+    </div>
+
+    <div>
+        Repetição {{ currentRep + 1 }}/{{ this.exercises.length }}: {{ exercises[this.currentEx].repetitions }}
+    </div>
+
+    <div>
+        {{ formatPhase(phase) }}
+    </div>
+
 </div>
 
-<div>
+<div class="tools">
     <button (click)="start()">Iniciar</button>
     <button (click)="pause()">Pausar</button>
     <button (click)="restart()">Reiniciar</button>
