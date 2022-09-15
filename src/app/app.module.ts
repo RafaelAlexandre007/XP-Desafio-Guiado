@@ -12,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { CepPipe } from './cep.pipe';
 import { CpfPipe } from './cpf.pipe';
+import { JoinStringsPipe } from './join-strings.pipe';
 
 
 registerLocaleData(localePt, 'pt-BR');
@@ -24,7 +25,8 @@ registerLocaleData(localePt, 'pt-BR');
     PipesComponent,
     CicleLifeComponent,
     CepPipe,
-    CpfPipe
+    CpfPipe,
+    JoinStringsPipe
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

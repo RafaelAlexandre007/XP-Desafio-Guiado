@@ -15,3 +15,11 @@
 <br>
 <p>CEP: {{ meuCep | cep}}</p>
 <p>CPF: {{ meuCPF | cpf}}</p>
+<br>
+<h3>Impure pipe</h3>
+<input [(ngModel)]="ipt" placeholder="Uma string"/>
+<button (click)="addString(ipt)">Adicionar</button>
+<ul>
+    <li *ngFor="let s of strings"> {{s}}</li>
+</ul>
+<p>Array formatado: {{ strings | joinStrings: ', '}}</p>
