@@ -1,0 +1,17 @@
+<br>
+<h3>Pipes</h3>
+<p>Texto: {{ text }}</p>
+<p>Texto: {{ text | lowercase}}</p>
+<p>Texto: {{ text | uppercase}}</p>
+<br>
+<p>N: {{n}}</p>
+<p>N: {{n | number: '5.1-3'}}</p>
+<p>N: {{n | number: '5.1-3': 'pt-BR'}}</p>
+<br>
+<p>Hoje: {{ today }}</p>
+<p>Hoje: {{ today | date: 'medium'}}</p>
+<p>Hoje: {{ today | date: 'short'}}</p>
+<p>Hoje: {{ today | date: 'H:mm'}}</p>
+<br>
+<p>CEP: {{ meuCep | cep}}</p>
+<p>CPF: {{ meuCPF | cpf}}</p>
