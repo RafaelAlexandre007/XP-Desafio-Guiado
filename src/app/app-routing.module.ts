@@ -3,10 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CicleLifeComponent } from './cicle-life/cicle-life.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   { path: 'cicles', component: CicleLifeComponent},
   { path: 'pipes', component: PipesComponent },
+  { path: 'services', component: ServicesComponent }
+
 ];
 
 @NgModule({

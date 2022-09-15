@@ -1,0 +1,9 @@
+<h3>Manipulando Listas com Services</h3>
+<div *ngFor="let item of todoListService.items">
+    <ul>
+        <li>{{ item }}</li>
+    </ul>
+</div>
+
+<input [(ngModel)]="addItem" type="text" placeholder="Adicione um item.">
+<button (click)="todoListService.add(addItem)">Adicionar</button>
