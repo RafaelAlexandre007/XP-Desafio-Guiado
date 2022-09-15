@@ -10,16 +10,16 @@ export class PipesComponent implements OnInit {
   n = 12050.4983;
   today = new Date();
   meuCep = '99356900';
-  meuCPF = '09876543223'
-  strings: string[] = ['gato', 'cavalo']
-  ipt: string = "";
+  meuCPF = '09876543223';
+  strings: string[] = ['gato', 'cavalo'];
+  ipt: string = '';
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  addString(newString: string){
-    // this.strings = [...this.strings, newString]
+  addString(newString: string) {
+    //this.strings = [...this.strings, newString]
     this.strings.push(newString);
   }
 }
