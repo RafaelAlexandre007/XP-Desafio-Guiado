@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConfigComponent } from './config/config.component';
 import { TimerComponent } from './timer/timer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { CicleLifeComponent } from './cicle-life/cicle-life.component';
 import { registerLocaleData } from '@angular/common';
@@ -15,6 +15,7 @@ import { CpfPipe } from './cpf.pipe';
 import { JoinStringsPipe } from './join-strings.pipe';
 import { ServicesComponent } from './services/services.component';
 import { TodoListService } from './todoList.service';
+import { TemplatesComponent } from './templates/templates.component';
 
 export const TEMA = new InjectionToken<string>('app.theme');
 
@@ -31,12 +32,11 @@ registerLocaleData(localePt, 'pt-BR');
     CpfPipe,
     JoinStringsPipe,
     ServicesComponent,
+    TemplatesComponent,
+    
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [
-    TodoListService,
-    { provide: TEMA, useValue: 'dark' }
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  providers: [TodoListService, { provide: TEMA, useValue: 'dark' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

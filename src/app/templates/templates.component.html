@@ -1,0 +1,12 @@
+<h3>Formulário</h3>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="name">Nome:
+        <input id="name" type="text" formControlName="name">
+    </label>
+    <label for="address">Endereço:
+        <input id="address" type="text" formControlName="address">
+    </label>
+    <input type="submit" value="Salvar">
+</form>
+<br>
+<p>{{ myForm.value | json }}</p>
