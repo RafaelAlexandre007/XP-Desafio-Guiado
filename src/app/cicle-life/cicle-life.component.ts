@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Exercise } from '../exercise';
 
 @Component({
   selector: 'app-cicle-life',
@@ -9,5 +8,6 @@ import { Exercise } from '../exercise';
 export class CicleLifeComponent {
   title = 'PRATICA-AULA10-DESAFIO2';
   config: boolean = false;
-  exercises: Exercise[] = [];
+
+  constructor() {}
 }
