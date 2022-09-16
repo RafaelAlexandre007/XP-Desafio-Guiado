@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-templates',
@@ -8,11 +14,12 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class TemplatesComponent {
   myForm = new FormGroup({
-    name: new FormControl(''),
+    name: new FormControl('', [Validators.required]),
     address: new FormControl(''),
   });
 
-  onSubmit(){
-    console.log(this.myForm.value)
+  onSubmit() {
+    console.log(this.myForm.value);
   }
 }
+

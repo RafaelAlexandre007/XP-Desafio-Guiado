@@ -3,10 +3,12 @@
     <label for="name">Nome:
         <input id="name" type="text" formControlName="name">
     </label>
+
     <label for="address">Endereço:
         <input id="address" type="text" formControlName="address">
     </label>
-    <input type="submit" value="Salvar">
+    <input [disabled]="myForm.status != 'VALID'" type="submit" value="Salvar">
 </form>
 <br>
+<p>Status do Formulário: {{ myForm.status }}</p>
 <p>{{ myForm.value | json }}</p>
