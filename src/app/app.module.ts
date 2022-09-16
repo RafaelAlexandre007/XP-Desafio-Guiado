@@ -16,6 +16,8 @@ import { JoinStringsPipe } from './join-strings.pipe';
 import { ServicesComponent } from './services/services.component';
 import { TodoListService } from './todoList.service';
 import { TemplatesComponent } from './templates/templates.component';
+import { RoutingComponent } from './routing/routing.component';
+import { Rounting1Component } from './rounting1/rounting1.component';
 
 export const TEMA = new InjectionToken<string>('app.theme');
 
@@ -33,6 +35,8 @@ registerLocaleData(localePt, 'pt-BR');
     JoinStringsPipe,
     ServicesComponent,
     TemplatesComponent,
+    RoutingComponent,
+    Rounting1Component,
     
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
