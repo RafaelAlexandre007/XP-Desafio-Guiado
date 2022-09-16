@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { JoinStringsPipe } from './join-strings.pipe';
 import { ServicesComponent } from './services/services.component';
 import { TodoListService } from './todoList.service';
 
+export const TEMA = new InjectionToken<string>('app.theme');
+
 registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
@@ -31,7 +33,10 @@ registerLocaleData(localePt, 'pt-BR');
     ServicesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [
+    TodoListService,
+    { provide: TEMA, useValue: 'dark' }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

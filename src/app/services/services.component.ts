@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { TEMA } from '../app.module';
 import { TodoListService } from '../todoList.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class ServicesComponent implements OnInit {
   todoListService: TodoListService;
   addItem: string = "";
 
-  constructor(todoListService: TodoListService) {
+  constructor(todoListService: TodoListService, @Inject(TEMA) public tema: string) {
     this.todoListService = todoListService;
   }
 
