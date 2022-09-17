@@ -1,3 +1,21 @@
-input[type="number"]{
-    width: 5em;
+form{
+    padding: 0 16px;
+}
+
+input[type="number"] {
+  width: 5em;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-column-preco,
+.mat-column-preco {
+  text-align: right;
+}
+
+.preco{
+    width: 6em;
+    margin: 0 16px;
 }
