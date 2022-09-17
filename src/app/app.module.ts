@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ConfigComponent } from './config/config.component';
 import { TimerComponent } from './timer/timer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { TodoListService } from './todoList.service';
 import { TemplatesComponent } from './templates/templates.component';
 import { RoutingComponent } from './routing/routing.component';
 import { Rounting1Component } from './rounting1/rounting1.component';
+import { BackEndComponent } from './back-end/back-end.component';
 
 export const TEMA = new InjectionToken<string>('app.theme');
 
@@ -37,9 +39,15 @@ registerLocaleData(localePt, 'pt-BR');
     TemplatesComponent,
     RoutingComponent,
     Rounting1Component,
-    
+    BackEndComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [TodoListService, { provide: TEMA, useValue: 'dark' }],
   bootstrap: [AppComponent],
 })

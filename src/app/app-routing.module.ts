@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BackEndComponent } from './back-end/back-end.component';
 import { CicleLifeComponent } from './cicle-life/cicle-life.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { Rounting1Component } from './rounting1/rounting1.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'templates', component: TemplatesComponent },
   { path: 'routing', component: RoutingComponent },
   { path: 'routing1/:id', component: Rounting1Component },
+  { path: 'backend', component: BackEndComponent}
 ];
 
 @NgModule({
